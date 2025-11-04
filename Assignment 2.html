@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <style>
+    body {
+      font-family: Garamond;
+      margin: 0;
+      padding: 0;
+      background-color: #e6e0e7;
+      color: #8a58b6;
+    }
+    header {
+  background-color: #E2BFD9;
+  color: #674188;
+  text-align: left;          
+  padding: 2em;
+  display: flex;             
+  align-items: center;       
+  justify-content: center;   
+  gap: 30px;                 
+}
+header img {
+  width: 200px;              
+  height: 250px;           
+  border-radius: 15px;     
+  object-fit: cover;        
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+}
+header div {
+  max-width: 600px;          
+}
+    section {
+      background-color: #E2BFD9;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    img {
+      width: 150px;
+      border-radius: 50%;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #F7EFE5;
+      color: #674188;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="240075.jpeg" alt="Pham Nguyen Tam Dan">
+  <div>
+    <h1>Pham Nguyen Tam Dan</h1>
+    <p>Hello! Welcome to my webpage. I’m a sophomore at Fulbright University Vietnam.</p>
+    <p>Current location: Ho Chi Minh City, Vietnam</p>
+      <p> Contact info: tamdanpham0108@gmail.com</p>
+  </div>
+</header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Currently, I am intending on majoring in Psychology, with a minor in Social Studies. My interest is in Social Psychology and I love learning about human experience as well as phenomena in the social realm. </p>
+      <p>When not learning, I would usually watch TV or listen to music, and sometimes, I would go for a walk to ease my mind. </p>
+
+    <h3>Quick Facts:</h3>
+
+          <p>I love horror movies but I can never watch the whole since so I always watch review film on  YouTube </p>
+
+
+    <ul>
+      <li><strong>Education:</strong> Fulbright University Vietnam</li>
+      <li><strong>Skills:</strong> Doing reseach in Psychology and Social Studies, academic writing</li>
+      <li><strong>Hobbies:</strong> Listening to music, watching horror movies, cooking</li>
+    </ul>
+  </section>
+
+ <section id="skills">
+    <h2>Skills</h2>
+    <p>Here are a few things that I am confident in: </p>
+    <ul>
+      <li>Research in Psychology and Social Studies</li>
+      <li>Academic Writing</li>
+      <li>Critical Thinking</li>
+
+    </ul>
+  </section>
+  <section id="portfolio">
+    <h2>My Projects</h2>
+    <p>Here are a few things I’ve worked on:</p>
+    <ul>
+      <li><a href="⁦https://drive.google.com/file/d/1SvQMNQS-6LFaQGm6IGIpLTigICIrB45S/view?usp=sharing⁩/">Psychology Poster </a></li>
+          <p>This poster is from my Introduction to Psychology course which I am very proud of since it showcases my skills in designing and doing research.</p>
+
+          <li><a href="⁦https://docs.google.com/document/d/1t1NtEWBXUgu60b0nK6N1PDWnxsZhWSr_/edit?usp=sharing&ouid=112665566520864218972&rtpof=true&sd=true⁩/">Writing Assignment</a></li>
+              <p>This is my writing assignment from Global Humanities and Social Change from the Fall Semester of my first year, which up until now, I still consider that it's a really cool writing.</p>
+
+
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>You can leave notes or messages for me here:</h2>
+    <form>
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name"><br><br>
+
+      <label for="message">Message:</label><br>
+      <textarea id="message" rows="4" cols="40"></textarea><br><br>
+
+      <button type="button">Send</button>
+    </form>
+    <p>Or reach me at: <a href="mailto:dan.pham.240075@student.fulbright.edu.vn">dan.pham.240075@student.fulbright.edu.vn</a></p>
+  </section>
+
+  <section id="notebook">
+    <h2>Tell me</h2>
+    <textarea id="noteInput" placeholder="How are you today?"></textarea><br>
+    <button id="addNoteBtn">Add Note</button>
+    <div id="notesDisplay"></div>
+  </section>
+
+  <footer>
+    <p>Thank you so much for visiting my webpage.</p>
+        <p>I hope you have a great day</p>
+
+  </footer>
+
+  <script>
+    const input = document.getElementById('noteInput');
+    const btn = document.getElementById('addNoteBtn');
+    const display = document.getElementById('notesDisplay');
+
+    btn.addEventListener('click', function() {
+      const text = input.value.trim();
+      if (text === '') {
+        alert('Please type your note before adding!');
+        return;
+      }
+      const note = document.createElement('p');
+      note.textContent = text;
+      display.appendChild(note);
+      input.value = ''; // clear input
+    });
+  </script>
+</body>
+</html>
